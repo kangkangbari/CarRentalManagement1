@@ -1,0 +1,6 @@
+using Microsoft.EntityFrameworkCore;
+
+public class CarRentalManagementContext(DbContextOptions<CarRentalManagementContext> options) : DbContext(options)
+{
+    public DbSet<CarRentalManagement.Domain.Make> Make { get; set; } = default!;
+}
